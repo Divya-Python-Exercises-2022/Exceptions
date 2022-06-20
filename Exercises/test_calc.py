@@ -39,5 +39,6 @@ class TestCalcSolution(unittest.TestCase):
         value = parse_input(input_values_4)
         self.first = calculate(float(value[0]), value[1], float(value[2]))
         self.second = 4.4
-        assertion_func = self._getAssertEqualityFunc(self.first, self.second)
-        assertion_func(self.first, self.second)
+        self.assertEqual(self.first, self.second)
+        #assertion_func = self._getAssertEqualityFunc(self.first, self.second)
+        #assertion_func(self.first, self.second)
